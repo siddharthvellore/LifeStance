@@ -11,12 +11,6 @@ variable "profile" {
   default = "sid"
 }
 
-variable "instancecount" {
-  type = number
-  description = "Instance Count"
-  default = "2"
-}
-
 //Networking
 variable "vpc_cidr" {
   description = "The CIDR block of the vpc"
@@ -49,6 +43,11 @@ variable "ami" {
   default       = "ami-04169656fea786776"
 }
 
+variable "instance_count" {
+  type = number
+  description = "Instance Count"
+  default = "2"
+}
 
 variable "instance_name" {
   description   = "Value of the Name tag for the EC2 instance"
