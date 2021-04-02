@@ -36,8 +36,8 @@ module "instance_module" {
 source = "../modules/compute"
 depends_on = [module.networking]
   ami = var.ami
+  vpc_id = module.networking.vpc_id
   instance_type = var.instance_type
   instance_name = var.instance_name
-  vpc_security_group_ids = module.networking.security_groups_ids
   subnet_id = flatten([module.networking.private_subnets_id])[0]
 }
