@@ -43,7 +43,6 @@ module "instance_module" {
 source = "../modules/compute"
 depends_on = [module.security_group]
   ami = var.ami
-  count = var.instance_count
   instance_type = var.instance_type
   instance_name = var.instance_name
   vpc_security_group_ids = module.security_group.security_group_id

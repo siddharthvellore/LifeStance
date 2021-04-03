@@ -36,7 +36,6 @@ module "instance_module" {
 source = "../modules/compute"
 depends_on = [module.networking]
   ami = var.ami
-  count = var.instance_count
   vpc_id = module.networking.vpc_id
   instance_type = var.instance_type
   instance_name = var.instance_name
