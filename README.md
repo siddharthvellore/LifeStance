@@ -98,7 +98,7 @@ AWS profiles or assume IAM Roles.
     Name = "${var.instance_name}-${count.index+1}"
     }
     ``` 
-   - Instance name is declared using a **Variable*
+   - Instance name is declared using a **Variable**
 6) Finally, use ```terraform destroy``` to delete your entire stack resource after a successful test.   
 
 **<u>Screenshots for reference**</u>
