@@ -94,7 +94,6 @@ AWS profiles or assume IAM Roles.
 5) The Ec2 name tags can be created based on count of instances as follows
    ``` terraform
     tags = {
-    created_by = "terraform"
     Name = "${var.instance_name}-${count.index+1}"
     }
     ``` 
