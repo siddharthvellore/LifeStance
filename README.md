@@ -11,13 +11,13 @@
 
 -----------
 
-###Prerequisites:
+<u>**Prerequisites:**</u>
 1. Terraform Required
 2. AWS Account **(Free Tier Recommended)**
 3. AWS Profile Setup on the machine
 
 
-###Best Practices
+<u>**Best Practices**</u>
 1. Always call <u>reusable or common</u> modules from **Source Control** as follows
       ``` terraform
       module "serverless-lambda" { 
@@ -45,7 +45,7 @@ AWS profiles or assume IAM Roles.
 5. Always use **Terraform variables** for reusable template across
    environments or stacks   
 
-###Terraform basic CLI Commands
+**<u>Terraform basic CLI Commands**</u>
  - **init** - Prepare your working directory for other commands
  - **validate** - Check whether the configuration is valid
  - **plan** - Show changes required by the current configuration
@@ -54,7 +54,7 @@ AWS profiles or assume IAM Roles.
  - **version** - Show the current Terraform version
  - **help** - Show this help output
 
-###Terraform Variables & Outputs
+**<u>Terraform Variables & Outputs**</u>
 1) You can declare input values are variables using a file [variables.tf](https://github.com/siddharthvellore/LifeStance/blob/main/version-2/project/variables.tf)
    - <u>You need to declare those **variables** in your **Terraform main file** using the format below</u>
     ```terraform
@@ -68,8 +68,8 @@ AWS profiles or assume IAM Roles.
     value = module.networking.vpc_id
     }
     ```
-   
-###Solution Approach
+
+**<u>Solution Approach**</u>
 - **Version 1** - <u>This is useful when a security group is used only for
   one module</u>
     - VPC Module 
@@ -79,8 +79,8 @@ AWS profiles or assume IAM Roles.
     - VPC Module
     - Security Group
     - EC2 Module
-    
-###Run the script
+
+**<u>Run the script**</u>
 1) Navigate to project (https://github.com/siddharthvellore/LifeStance/blob/main/version-2/project)
 2) Run the following **Terraform** commands
    ``` shell
@@ -100,8 +100,8 @@ AWS profiles or assume IAM Roles.
     ``` 
    - Instance name is declared using a **Variable*
 6) Finally, use ```terraform destroy``` to delete your entire stack resource after a successful test.   
-    
-##Screenshots for reference
+
+**<u>Screenshots for reference**</u>
 1) S3 State file for the resource
 2) DynamoDB state lock for the resource
 3) Public Subnet, Internet Gateway and association
